@@ -1,0 +1,66 @@
+import React from "react";
+import { View, Text, SafeAreaView, Button, StyleSheet } from 'react-native';
+
+//arrow function
+const App() => {
+  const sayHello = label => {
+    console.log('Merhabalar ' + label);
+  };
+
+  
+  //function sayHello(){ //aynı işlevde
+  //  console.log('Merhabalar!');
+  //}
+  
+
+  const styles = StyleSheet.create({
+    container: { 
+      flex: 1,
+      flexDirection: 'row', // default deger column
+    },
+    upper_view_contanier: {
+      backgroundColor: 'red',
+      flex: 1.5,
+      margin: 10,
+      padding: 10,
+      borderRadius: 5,
+    },
+    center_view_contanier: {
+      backgroundColor: 'green',
+      flex: 2,
+      margin: 10,
+      padding: 10,
+      borderRadius: 5,
+    },
+    bottom_view_contanier: {
+      backgroundColor: 'blue',
+      flex: 3,
+      margin: 10,
+      padding: 10,
+      borderRadius: 5,
+    }
+  })
+
+  return (
+    <View style={styles.container}>
+      <View style={{ 
+        backgroundColor: 'yellow', 
+        flex: 4.5,
+        }} >
+        <Text>Hello World!!</Text>
+      </View>
+      <View style={styles.upper_view_contanier}>
+        <Text>Hello World2!!</Text>
+      </View >
+      <View style={styles.center_view_contanier}>
+        <Text>Hello World2!!</Text>
+      </View >
+      <View style={styles.bottom_view_contanier}>
+        <Text>merhaba Dünya</Text>
+      </View >
+      <Button title="Here Press me!" onPress={() => sayHello('Furkan')} disabled />
+    </View>
+  )
+}
+
+export default App;
